@@ -4,6 +4,8 @@ Create stunning presentations in **Markdown** using [Reveal.js](https://github.c
 
 ## Creating a new presentation
 
+Start by installing the `revelar` utility globally:
+
 ```shell
 npm install --g revelar
 ```
@@ -16,13 +18,13 @@ revelar create presentation-name
 
 This will create a new folder called `presentation-name` with:
 
-* A `slides` folder where each Markdown file correspond to a different section in your presentation (each section can have multiple slides);
+* A `slides` folder to contain your slides divided into multiple sections;
 * A `themes` folder to contain custom themes (like a sample `yellow.css`);
 * And the `revelar_config.json` with configuration parameters.
 
 ## Running the server
 
-To start a server and see the sample slides run:
+Once the project is created, start the server to see the slides:
 
 ```shell
 revelar
@@ -30,11 +32,15 @@ revelar
 
 And point your browser to [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
 
-## The slides
+## Anatomy of a slide
+
+Inside the `slides` folder you can place as many Markdown files as you want.
 
 Each file will correspond to a different section in your presentation.
 
-Each section you can contain multiple slides, each separated by a `--`:
+Each section can contain multiple slides, each separated by a `--`.
+
+Here is an example of a section writen in a Markdown file:
 
 ```markdown
 # Revelar
@@ -53,7 +59,7 @@ Each section you can contain multiple slides, each separated by a `--`:
 
 ## Themes
 
-It is possible to theme your presentation from the [available Reveal.js themes](https://github.com/hakimel/reveal.js#theming) by specifying it in the `revelar_config.json` file:
+It is possible to change the theme of your presentation from the [available Reveal.js themes](https://github.com/hakimel/reveal.js#theming) by specifying it in the `revelar_config.json` file:
 
 ```json
 {
