@@ -42,6 +42,9 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
 
+        <% slides.forEach(function (slide) { %>
+          <section data-markdown="slides/<%= slide %>" data-separator="^\-\*\*" data-vertical="^\-\-"></section>
+        <% }) %>
       </div>
     </div>
 
