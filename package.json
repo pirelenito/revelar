@@ -1,0 +1,17 @@
+{
+  "name": "relevar",
+  "version": "0.0.1",
+  "description": "Command line tool to create stunning presentations using Reveal.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "bin/revelar",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^2.14.4",
+    "express": "^4.0.0",
+    "reveal.js": "^2.6.2"
+  }
+}
