@@ -10,6 +10,8 @@
     "url": "git@github.com:pirelenito/revelar.git"
   },
 
+  "preferGlobal": "true",
+
   "bin": "bin/revelar",
 
   "author": {
