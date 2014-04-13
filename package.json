@@ -2,13 +2,26 @@
   "name": "relevar",
   "version": "0.0.1",
   "description": "Command line tool to create stunning presentations using Reveal.js",
+  "readmeFilename": "README.md",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pirelenito/revelar.git"
   },
+
   "bin": "bin/revelar",
-  "author": "",
-  "license": "ISC",
+
+  "author": {
+    "name": "Paulo Ragonha",
+    "email": "paulo@ragonha.me",
+    "url": "http://paulo.ragonha.me"
+  },
+
+  "license": "MIT",
+
+  "homepage": "https://github.com/pirelenito/revelar",
+
   "dependencies": {
     "connect": "^2.14.4",
     "ejs": "^1.0.0",
