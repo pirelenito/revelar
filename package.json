@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "connect": "^2.14.4",
+    "ejs": "^1.0.0",
     "express": "^4.0.0",
     "reveal.js": "^2.6.2"
   }
