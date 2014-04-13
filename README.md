@@ -35,6 +35,16 @@ revelar
 
 Open your fancy presentation at [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
 
+## Themes
+
+It is possible to theme your presentation from the [available Reveal.js themes](https://github.com/hakimel/reveal.js#theming) by specifying it in the `revelar_config.json` file:
+
+```json
+{
+  "theme": "sky"
+}
+```
+
 ## Author
 
 [Paulo Ragonha](http://paulo.ragonha.me).
