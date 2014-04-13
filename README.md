@@ -10,7 +10,7 @@ npm install --g revelar
 
 Create a new project with a `slides` folder and place your slide files in there.
 
-Each file will correspond to a different section in your presentation. In each file you can have multiple slides, each separated by a `---` pattern like:
+Each file will correspond to a different section in your presentation. In each file you can have multiple slides, each separated by a `--` pattern like:
 
 ```markdown
 # Revelar
