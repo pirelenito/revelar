@@ -45,6 +45,10 @@ It is possible to theme your presentation from the [available Reveal.js themes](
 }
 ```
 
+### Custom themes
+
+You can place your custom theme files inside the `themes` folder.
+
 ## Author
 
 [Paulo Ragonha](http://paulo.ragonha.me).
