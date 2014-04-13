@@ -1,5 +1,28 @@
 #!/usr/bin/env node
 
-var revelar = require('../lib/revelar');
+var ncp = require('ncp').ncp,
+    path = require('path'),
+    revelar = require('../lib/revelar');
 
-revelar.listen(8000);
+
+if (process.argv[2] === 'create') {
+  var name = process.argv[3];
+  create(name);
+} else {
+  startServer();
+}
+
+
+function create (name, callback) {
+  console.log('creating project');
+
+  var source = path.join(__dirname, '../template'),
+      destination = path.join(process.cwd(), name || '.');
+
+  ncp(source, destination, callback);
+}
+
+
+function startServer () {
+  revelar.listen(8000);
+}

@@ -4,30 +4,24 @@
   "description": "Command line tool to create stunning presentations using Reveal.js",
   "readmeFilename": "README.md",
   "main": "index.js",
-
   "repository": {
     "type": "git",
     "url": "git@github.com:pirelenito/revelar.git"
   },
-
   "preferGlobal": "true",
-
   "bin": "bin/revelar",
-
   "author": {
     "name": "Paulo Ragonha",
     "email": "paulo@ragonha.me",
     "url": "http://paulo.ragonha.me"
   },
-
   "license": "MIT",
-
   "homepage": "https://github.com/pirelenito/revelar",
-
   "dependencies": {
     "connect": "^2.14.4",
     "ejs": "^1.0.0",
     "express": "^4.0.0",
+    "ncp": "^0.5.0",
     "reveal.js": "^2.6.2"
   }
 }
