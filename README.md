@@ -32,3 +32,9 @@ Then start the server
 ```shell
 revelar
 ```
+
+Open your fancy presentation at [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
+
+## Author
+
+[Paulo Ragonha](http://paulo.ragonha.me).
