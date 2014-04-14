@@ -1,5 +1,5 @@
 # Revelar
-## Create presentantions from your command line
+## Create presentations from your command line
 
 --
 
