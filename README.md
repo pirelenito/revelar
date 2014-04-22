@@ -15,6 +15,8 @@ cd my_presentation
 revelar
 ```
 
+Open the presentation server in your browser at [http://localhost:8000](http://localhost:8000).
+
 And start coding your slides in **Markdown**.
 
 ## Anatomy of a slide
