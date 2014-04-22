@@ -1,8 +1,6 @@
 # Revelar
 
-Create stunning presentations in **Markdown** using [Reveal.js](https://github.com/hakimel/reveal.js) from the confort of your command line.
-
-## Creating a new presentation
+Create stunning presentations in **Markdown** using [Reveal.js](https://github.com/hakimel/reveal.js) from the comfort of your command line.
 
 Start by installing the `revelar` utility globally:
 
@@ -10,37 +8,22 @@ Start by installing the `revelar` utility globally:
 npm install --g revelar
 ```
 
-Create a new presentation project.
+Then, from within any folder you can start the revelar server:
 
 ```shell
-revelar create presentation-name
-```
-
-This will create a new folder called `presentation-name` with:
-
-* A `slides` folder to contain your slides divided into multiple sections;
-* A `themes` folder to contain custom themes (like a sample `yellow.css`);
-* And the `revelar_config.json` with configuration parameters.
-
-## Running the server
-
-Once the project is created, start the server to see the slides:
-
-```shell
+cd my_presentation
 revelar
 ```
 
-And point your browser to [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
+And start coding your slides in **Markdown**.
 
 ## Anatomy of a slide
 
-Inside the `slides` folder you can place as many Markdown files as you want.
+Revelar will load as many markdown files are available in the folder its executed, creating for each a separate section in your presentation. It will sort the files by name while loading, so you can have files like `01-introduction.md`, `02-about-me.md` and so on to enforce your sequence.
 
-Each file will correspond to a different section in your presentation.
+To tell Revelar where a slide ends and another begins you need to place a special separator: `--`.
 
-Each section can contain multiple slides, each separated by a `--`.
-
-Here is an example of a section writen in a Markdown file:
+So a Markdown file with three slides would look like:
 
 ```markdown
 # Revelar
@@ -57,9 +40,23 @@ Here is an example of a section writen in a Markdown file:
 # And a third
 ```
 
+## Configuration
+
+To change the default parameters that are passed while initializing [Reveal.js](https://github.com/hakimel/reveal.js), create a `revelar_config.json` file at the same folder of the slide files and add any of the [available Reveal.js config options](https://github.com/hakimel/reveal.js#configuration).
+
+Bellow is an example that disables the controls, disables the progress indicator and changes the transition effect:
+
+```json
+{
+  "transition": "linear",
+  "controls": false,
+  "progress": false
+}
+```
+
 ## Themes
 
-It is possible to change the theme of your presentation from the [available Reveal.js themes](https://github.com/hakimel/reveal.js#theming) by specifying it in the `revelar_config.json` file:
+It is possible to change the theme of the presentation from the [available Reveal.js themes](https://github.com/hakimel/reveal.js#theming) by specifying it in the `revelar_config.json` file:
 
 ```json
 {
@@ -71,18 +68,15 @@ It is possible to change the theme of your presentation from the [available Reve
 
 You can place your custom theme files inside the `themes` folder and use them the same way as a default theme.
 
-## Configuration
+## Bootstraping a new presentation
 
-The `revelar_config.json` file accepts any of the [Reveal.js config options](https://github.com/hakimel/reveal.js#configuration). So you can for example disable the controls, disable the progress indicator, change the transition effect:
+If you want a template to start a new presentation, Revelar can help you with that.
 
-```json
-{
-  "theme": "yellow",
-  "transition": "linear",
-  "controls": false,
-  "progress": false
-}
+```bash
+revelar create my-project
 ```
+
+This command will create a new folder called `my-project` with some sample slides, a config file and a theme.
 
 ## Acknowledgments
 
