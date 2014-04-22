@@ -71,6 +71,19 @@ It is possible to change the theme of your presentation from the [available Reve
 
 You can place your custom theme files inside the `themes` folder and use them the same way as a default theme.
 
+## Configuration
+
+The `revelar_config.json` file accepts any of the [Reveal.js config options](https://github.com/hakimel/reveal.js#configuration). So you can for example disable the controls, disable the progress indicator, change the transition effect:
+
+```json
+{
+  "theme": "yellow",
+  "transition": "linear",
+  "controls": false,
+  "progress": false
+}
+```
+
 ## Acknowledgments
 
 This is build on top of the amazing [Reveal.js](https://github.com/hakimel/reveal.js) framework.

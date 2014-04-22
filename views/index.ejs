@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/<%= theme %>.css" id="theme">
+    <link rel="stylesheet" href="css/theme/<%= config.theme %>.css" id="theme">
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -50,12 +50,15 @@
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
+    <script src="js/underscore-min.js"></script>
 
     <script>
 
+      var revelarConfig = <%- JSON.stringify(config) %>;
+
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
+      var revealConfig = {
         controls: true,
         progress: true,
         history: true,
@@ -77,8 +80,10 @@
           { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
           { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
-      });
+      };
 
+
+      Reveal.initialize(_.extend(revealConfig, revelarConfig));
     </script>
 
   </body>
