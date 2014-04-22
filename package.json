@@ -1,6 +1,6 @@
 {
   "name": "revelar",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Command line tool to create stunning presentations using Reveal.js",
   "readmeFilename": "README.md",
   "main": "index.js",
